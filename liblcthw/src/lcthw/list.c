@@ -27,7 +27,7 @@ int List_validate(List * list)
     check(list != NULL, "list must not be NULL");
     check(list->count >= 0, "Count must not be negative");
     if(list->count == 0) {
-        check(list->first != NULL, "Can't have count of 0 with non-null first");
+        check(list->first == NULL, "Can't have count of 0 with non-null first");
     }
 
 error:

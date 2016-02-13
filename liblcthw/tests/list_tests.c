@@ -43,6 +43,7 @@ char *test_push_pop()
     val = List_pop(list);
     mu_assert(val == test1, "Wrong value on pop.");
     mu_assert(List_count(list) == 0, "Wrong count after pop.");
+    mu_assert(List_first(list) == NULL, "First not NULL on empty list.");
 
     return NULL;
 }
